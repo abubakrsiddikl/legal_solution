@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
+    <!-- font awesome link -->
+    <script
+      src="https://kit.fontawesome.com/c39ee85a76.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- tialwind and dasiy ui link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
@@ -20,16 +25,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- add custom class -->
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
             },
           },
-        }
-      </script>
+        },
+      };
+    </script>
     <!-- raw css -->
     <style>
       .eb-garamond-font {
@@ -38,6 +43,59 @@
     </style>
   </head>
   <body>
-    <h1 class="">hello world</h1>
+    <!-- header section -->
+    <header class="w-11/12 mx-auto">
+      <nav class="w-full mt-3">
+        <div class="flex justify-between bg-base-100">
+          <!-- nav start -->
+          <div class="">
+            <a class="flex text-2xl text-black"><img src="./images/logo2.png" alt=""></a>
+          </div>
+          <!-- nav center -->
+          <div class=" hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-[#707070]">
+              <li>
+                <a>Home</i></a>
+              </li>
+              <li>
+                <a>Service<i class="fa-solid fa-greater-than"></i></a>
+              </li>
+              <li>
+                <a>Case<i class="fa-solid fa-greater-than"></i></a>
+              </li>
+              <li>
+                <a>Blog<i class="fa-solid fa-greater-than"></i></a>
+              </li>
+              <li>
+                <a>Contact Us<i class="fa-solid fa-greater-than"></i></a>
+              </li>
+            </ul>
+          </div>
+          <!-- nav end -->
+          <div class=" ">
+            <button class="btn bg-[#B68C5A] hidden lg:block text-white">Free Consultation</button>
+            <div class="dropdown lg:hidden dropdown-bottom dropdown-end">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn m-1 bg-white rounded-[50%]"
+              >
+                <i class="fa-solid fa-bars rounded-[50%] bg-white"></i>
+              </div>
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
+                <li><a>Home</a></li>
+                <li><a>Service</a></li>
+                <li><a>Case</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
